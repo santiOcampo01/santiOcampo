@@ -1,0 +1,74 @@
+---
+import Badge from './Badge.astro'
+const {
+  contact = 'Contáctame',
+  name = 'Nombre',
+  email = 'Correo electrónico',
+  subject = 'Asunto',
+  message = 'Mensaje',
+  submit = 'Enviar',
+  subjecttype = 'Escribe un asunto',
+  messagetype = 'Escribe tu mensaje',
+  example = 'ejemplo@correo.com',
+} = Astro.props
+---
+
+<section id="contact" class="w-full py-10 px-6  text-white">
+  <div class="max-w-xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center border-b border-white pb-4 mb-10">
+      {contact}
+    </h2>
+    <form action="https://formbold.com/s/oPavb" method="POST" class="flex flex-col gap-6">
+      <div>
+        <label for="name" class="block text-sm font-medium mb-1">{name}</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder={name}
+          required
+          class="w-full px-4 py-2 rounded-md border border-zinc-700 text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-lime-400 transition"
+        />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium mb-1">{email}</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder={example}
+          required
+          class="w-full px-4 py-2 rounded-md border border-zinc-700 text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-lime-400 transition"
+        />
+      </div>
+      <div>
+        <label for="subject" class="block text-sm font-medium mb-1">{subject}</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder={subjecttype}
+          class="w-full px-4 py-2 rounded-md border border-zinc-700 text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-lime-400 transition"
+        />
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium mb-1">{message}</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          placeholder={messagetype}
+          class="w-full px-4 py-2 rounded-md border border-zinc-700 text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-lime-400 transition resize-none"
+        ></textarea>
+      </div>
+      <Badge class="w-full bg">
+        <button
+          type="submit"
+          class="w-full py-[0.5rem] px-[5rem] flex items-center transition md:justify-center md:hover:scale-105 cursor-pointer"
+        >
+          {submit}
+        </button></Badge
+      >
+    </form>
+  </div>
+</section>

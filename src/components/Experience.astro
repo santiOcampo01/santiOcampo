@@ -1,0 +1,29 @@
+---
+import ExperienceItem from './ExperienceItem.astro'
+const EXPERIENCE = [
+  {
+    date: 'Enero 2025 - Junio 2025...',
+    title: 'Customer Service',
+    company: 'Players Lounge',
+    description:
+      'Encargado de la atención al cliente y resolución de incidencias en la plataforma. Implementación de mejoras en la experiencia del usuario mediante la optimización de procesos y la atención personalizada.',
+  },
+  {
+    date: 'Octubre 2023 - Noviembre 2024',
+    title: 'Web developer',
+    company: 'Kudzu partners',
+    description:
+      'Resolución de incidencias en aplicaciones web y análisis tecnológico para optimizar productos. Mejora de la experiencia de usuario en la página principal mediante rediseño visual y un carrusel de simulaciones. Desarrollo de un chatbot con inteligencia artificial para soporte automatizado a usuarios.',
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map(experience => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

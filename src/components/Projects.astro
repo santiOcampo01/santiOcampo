@@ -5,6 +5,13 @@ import Tailwind from './icons/Tailwind.astro'
 import Link from './icons/Link.astro'
 import LinkButton from './LinkButton.astro'
 import ASTROIcon from './icons/astroIcon.astro'
+import HtmlIcon from './icons/html.astro'
+import CssIcon from './icons/css.astro'
+import TS from './icons/TypeScript.astro'
+import Js from './icons/Js.astro'
+import React from './icons/React.astro'
+import Angular from './icons/angular.astro'
+import Nodejs from './icons/nodejs.astro'
 
 const TAGS = {
   NEXT: {
@@ -22,16 +29,153 @@ const TAGS = {
     class: 'bg-black text-white',
     icon: ASTROIcon,
   },
+  HtmlIcon: {
+    name: 'Html',
+    class: 'bg-[#E34F26] text-white',
+    icon: HtmlIcon,
+  },
+  CssIcon: {
+    name: 'Css',
+    class: 'bg-[#1572B6] text-white',
+    icon: CssIcon,
+  },
+  TS: {
+    name: 'TypeScript',
+    class: 'bg-[#3178C6] text-white',
+    icon: TS,
+  },
+  JS: {
+    name: 'JavaScript',
+    class: 'bg-[#F7DF1E] text-black',
+    icon: Js,
+  },
+  REACT: {
+    name: 'React',
+    class: 'bg-[#61DAFB] text-black',
+    icon: React,
+  },
+  ANGULAR: {
+    name: 'Angular',
+    class: 'bg-[#DD0031] text-white',
+    icon: Angular,
+  },
+  NODEJS: {
+    name: 'Node.js',
+    class: 'bg-[#339933] text-white',
+    icon: Nodejs,
+  },
 }
 const PROJECTS = [
   {
     title: 'Landing Page - CompuAudio',
-    description: 'Landing page con compra por medio de whatsapp con pequeño back para subir y quitar productos .',
+    description:
+      'Landing page funcional para una tienda de tecnología. Integra backend en Node.js para gestión de productos y sistema de compra por WhatsApp. Proyecto desarrollado para un cliente real.',
     link: 'https://compu-audio-landing.vercel.app/',
     github: 'https://github.com/santiOcampo01/CompuAudio-Landing',
     image: '/projects/compuAudio.png',
-    tags: [TAGS.ASTRO],
-  }
+    tags: [TAGS.HtmlIcon, TAGS.CssIcon, TAGS.ASTRO, TAGS.NODEJS],
+  },
+  {
+    title: 'Pesebre Sin JavaScript',
+    description:
+      'Juego tipo memorama navideño creado solo con HTML y CSS, sin JavaScript. Implementa lógica visual y animaciones con puro CSS. Reto técnico del bootcamp de la UTP.',
+    link: 'https://santiocampo01.github.io/Pesebre-sin-js/',
+    github: 'https://github.com/santiOcampo01/Pesebre-sin-js',
+    image: '/projects/pesebre.png',
+    tags: [TAGS.HtmlIcon, TAGS.CssIcon],
+  },
+  {
+    title: 'Juego del Ahorcado',
+    description:
+      'Juego de ahorcado en React con sistema de puntuación, palabras aleatorias y dibujo progresivo. Interfaz moderna y responsive.',
+    link: 'https://astonishing-biscotti-58f376.netlify.app/',
+    github: 'https://github.com/santiOcampo01/PruebaTecnica/tree/main/AhorcadoPruebaTecnica',
+    image: '/projects/ahorcado.png',
+    tags: [TAGS.HtmlIcon, TAGS.CssIcon, TAGS.JS, TAGS.REACT],
+  },
+  {
+    title: 'Telegram Bot con n8n',
+    description:
+      'Asistente virtual para Telegram creado con n8n. Agenda citas, responde preguntas como una IA y realiza recordatorios automáticos. Proyecto experimental conectado a un entorno real. Conectado a notion, gmail, google calendar, bases de datos y chat GPT.',
+    github: 'https://github.com/santiOcampo01/telegrambotl',
+    image: '/projects/telegram.png',
+    tags: [],
+  },
+  {
+    title: 'React e-commerce',
+    description:
+      'Tienda virtual completa con React y Node.js. Incluye carrito, pagos con Stripe y gestión de productos. Disponible solo en GitHub (sin despliegue actual).',
+    link: 'https://tienda-virtual-eight.vercel.app/',
+    github: 'https://github.com/santiOcampo01/Tienda-Virtual',
+    image: '/projects/reactStore.png',
+    tags: [TAGS.HtmlIcon, TAGS.CssIcon, TAGS.JS, TAGS.REACT, TAGS.NODEJS],
+  },
+  {
+    title: 'Angular e-commerce',
+    description:
+      'Aplicación de tienda desarrollada en Angular con autenticación, carrito y pagos con Stripe. Proyecto colaborativo. Disponible solo en GitHub (sin despliegue actual).',
+    link: 'https://shoping-swart.vercel.app/',
+    github: 'https://github.com/santiOcampo01/Angular-Store',
+    image: '/projects/angularStore.png',
+    tags: [TAGS.HtmlIcon, TAGS.CssIcon, TAGS.TS, TAGS.ANGULAR, TAGS.NODEJS],
+  },
+  {
+    title: 'Memorama Sin JavaScript',
+    description:
+      'Juego de memoria 100% funcional implementado solo con HTML y CSS, sin una sola línea de JavaScript. Reto técnico como parte de mi formación en el bootcamp de la UTP.',
+    link: 'https://santiocampo01.github.io/Proyecto-memorama/',
+    github: 'https://github.com/santiOcampo01/Proyecto-memorama',
+    image: '/projects/Memorama.png',
+    tags: [TAGS.HtmlIcon, TAGS.CssIcon],
+  },
+  {
+    title: 'Hexadecimal',
+    description:
+      'App interactiva que genera y aplica colores aleatorios como fondo, mostrando el código hexadecimal. Desarrollada con HTML, CSS y JavaScript.',
+    link: 'https://santiocampo01.github.io/hexadecimal/',
+    github: 'https://github.com/santiOcampo01/hexadecimal',
+    image: '/projects/hexa.png',
+    tags: [TAGS.HtmlIcon, TAGS.CssIcon, TAGS.JS],
+  },
+  {
+    title: 'Mokepon Platzi',
+    description:
+      'Juego interactivo para aprender DOM, lógica JS y consumo de APIs. Backend en Node.js y frontend con HTML, CSS y JavaScript. Basado en el curso de Platzi.',
+    link: 'https://nimble-heliotrope-821f81.netlify.app/',
+    github: 'https://github.com/santiOcampo01/mokepon',
+    image: '/projects/mokepon.png',
+    tags: [TAGS.HtmlIcon, TAGS.CssIcon, TAGS.JS, TAGS.NODEJS],
+  },
+  {
+    title: 'Gestor de libros',
+    description:
+      'CRUD de libros hecho con React y Node.js. Incluye búsqueda, pruebas unitarias y documentación con Swagger. Disponible solo en GitHub.',
+    github: 'https://github.com/santiOcampo01/GestorDeLibros',
+    image: '/projects/books.png',
+    tags: [TAGS.HtmlIcon, TAGS.CssIcon, TAGS.JS, TAGS.REACT, TAGS.NODEJS],
+  },
+  {
+    title: 'Kattito store',
+    description:
+      'Landing page responsive para tienda de mascotas. Proyecto colaborativo enfocado en buenas prácticas de desarrollo y diseño limpio.',
+    link: 'https://santiocampo01.github.io/kattito/',
+    github: 'https://github.com/santiOcampo01/kattito',
+    image: '/projects/katito.png',
+    tags: [TAGS.HtmlIcon, TAGS.CssIcon],
+  },
+  {
+    title: 'Perfil de GitHub',
+    description: 'Explora más proyectos, contribuciones y repositorios visitando mi perfil de GitHub. Ademas de mis contactos y redes sociales.',
+    github: 'https://github.com/santiOcampo01',
+    image: '/projects/github.png',
+    tags: [
+      {
+        name: 'GitHub',
+        class: 'bg-[#181717] text-white',
+        icon: GitHub,
+      },
+    ],
+  },
 ]
 ---
 
